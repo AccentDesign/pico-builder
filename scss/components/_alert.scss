@@ -1,0 +1,18 @@
+/**
+ * Alert
+ */
+
+[role="alert"] {
+  background-color: var(--alert-background-color);
+  color: var(--alert-color);
+
+  &:not(blockquote) {
+    padding: var(--spacing);
+    border: var(--border-width) solid var(--alert-border-color);
+    border-radius: var(--border-radius);
+  }
+
+  &:is(blockquote) {
+    --blockquote-border-color: var(--alert-border-color);
+  }
+}

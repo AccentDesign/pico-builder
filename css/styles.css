@@ -186,6 +186,9 @@ kbd {
   --loading-spinner-opacity: 0.5;
   --tooltip-background-color: var(--contrast);
   --tooltip-color: var(--contrast-inverse);
+  --alert-background-color: hsl(195deg, 88%, 86%);
+  --alert-border-color: var(--primary);
+  --alert-color: hsl(195deg, 90%, 32%);
   --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(65, 84, 98)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   --icon-chevron-button: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
@@ -286,6 +289,9 @@ kbd {
     --loading-spinner-opacity: 0.5;
     --tooltip-background-color: var(--contrast);
     --tooltip-color: var(--contrast-inverse);
+    --alert-background-color: hsl(195deg, 88%, 86%);
+    --alert-border-color: var(--primary);
+    --alert-color: hsl(195deg, 90%, 32%);
     --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
     --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(162, 175, 185)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     --icon-chevron-button: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
@@ -385,6 +391,9 @@ kbd {
   --loading-spinner-opacity: 0.5;
   --tooltip-background-color: var(--contrast);
   --tooltip-color: var(--contrast-inverse);
+  --alert-background-color: hsl(195deg, 88%, 86%);
+  --alert-border-color: var(--primary);
+  --alert-color: hsl(195deg, 90%, 32%);
   --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
   --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(162, 175, 185)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   --icon-chevron-button: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
@@ -2155,6 +2164,22 @@ textarea,
  */
 article {
   margin-bottom: var(--block-spacing-vertical);
+}
+
+/**
+ * Alert
+ */
+[role=alert] {
+  background-color: var(--alert-background-color);
+  color: var(--alert-color);
+}
+[role=alert]:not(blockquote) {
+  padding: var(--spacing);
+  border: var(--border-width) solid var(--alert-border-color);
+  border-radius: var(--border-radius);
+}
+[role=alert]:is(blockquote) {
+  --blockquote-border-color: var(--alert-border-color);
 }
 
 /**

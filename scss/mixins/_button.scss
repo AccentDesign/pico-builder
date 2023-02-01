@@ -11,8 +11,8 @@
 //   --secondary-focus: #{rgba($grey-600, 0.125)};
 //   --secondary-inverse: #{$white};
 // }
-// @include button('primary');
-// @include button-outline('primary');
+// @include button('secondary');
+// @include button-outline('secondary');
 //
 @mixin button($class) {
   // Basic
