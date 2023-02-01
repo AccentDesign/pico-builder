@@ -1,7 +1,4 @@
-/*!
- * Pico.css v1.5.7 (https://picocss.com)
- * Copyright 2019-2023 - Licensed under MIT
- */
+@use "variables" as *;
 
 // Layout
 @import "@picocss/pico/scss/layout/document"; // html

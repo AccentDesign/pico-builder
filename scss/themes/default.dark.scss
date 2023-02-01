@@ -2,17 +2,15 @@
  * Theme: dark only
  */
 
-// Variables
-@import "../variables";
-@import "default/colors";
+// Common styles
+@use "default/styles";
 
-// Commons styles
-@import "default/styles";
+// Themes
+@use "default/dark" as dark;
 
 // Dark theme (Only)
-@import "default/dark";
 :root {
-  @include dark;
+  @include dark.dark;
 }
 
 // Accent-color

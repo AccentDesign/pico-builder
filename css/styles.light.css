@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*!
- * pico-builder v1.0.0
+ * pico-builder v1.0.0 (https://github.com/AccentDesign/pico-builder)
  * Copyright 2023 - Licensed under MIT
- */
-/**
- * Theme: light only
+ *
+ * Pico.css v1.5.7 (https://picocss.com)
+ * Copyright 2019-2023 - Licensed under MIT
  */
 :root {
   --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
@@ -101,6 +101,9 @@ kbd {
   --font-weight: bolder;
 }
 
+/**
+ * Theme: light only
+ */
 :root {
   --background-color: #fff;
   --color: hsl(205deg, 20%, 32%);
@@ -209,10 +212,6 @@ progress,
   accent-color: var(--primary);
 }
 
-/*!
- * Pico.css v1.5.7 (https://picocss.com)
- * Copyright 2019-2023 - Licensed under MIT
- */
 /**
  * Document
  * Content-box & Responsive typography

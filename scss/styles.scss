@@ -1,18 +1,12 @@
-/*!
- * pico-builder v1.0.0
- * Copyright 2023 - Licensed under MIT
- */
-
-// Config
-@import "variables";
+@use "utils/copyright";
 
 // Theming
-@import "themes/default";
+@use "themes/default";
 
 // Pico
-@import "pico";
+@use "pico";
 
 // Custom
-@import "layout/article";
-@import "components/alert";
-@import "components/modal";
+@use "layout/article";
+@use "components/alert";
+@use "components/modal";

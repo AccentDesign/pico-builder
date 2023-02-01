@@ -2,17 +2,15 @@
  * Theme: light only
  */
 
-// Variables
-@import "../variables";
-@import "default/colors";
+// Common styles
+@use "default/styles";
 
-// Commons styles
-@import "default/styles";
+// Themes
+@use "default/light" as light;
 
 // Light theme (Only)
-@import "default/light";
 :root {
-  @include light;
+  @include light.light;
 }
 
 // Accent-color

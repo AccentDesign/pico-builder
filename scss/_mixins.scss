@@ -2,5 +2,4 @@
  * Mixins
  */
 
-// Config
-@import "mixins/button";
+@forward "mixins/button";
