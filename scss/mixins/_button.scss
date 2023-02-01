@@ -1,0 +1,51 @@
+/**
+ * Button
+ */
+
+// Used to create button style
+//
+// Usage:
+// :root {
+//   --secondary: #{$grey-600};
+//   --secondary-hover: #{$grey-700};
+//   --secondary-focus: #{rgba($grey-600, 0.125)};
+//   --secondary-inverse: #{$white};
+// }
+// @include button('primary');
+// @include button-outline('primary');
+//
+@mixin button($class) {
+  // Basic
+  :is(button, input[type="submit"], input[type="button"], [role="button"]).#{$class},
+  input[type="reset"] {
+    --background-color: var(--#{$class});
+    --border-color: var(--#{$class});
+    --color: var(--#{$class}-inverse);
+    cursor: pointer;
+
+    &:is([aria-current], :hover, :active, :focus) {
+      --background-color: var(--#{$class}-hover);
+      --border-color: var(--#{$class}-hover);
+      --color: var(--#{$class}-inverse);
+    }
+
+    &:focus {
+      --box-shadow: var(--button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),
+        0 0 0 var(--outline-width) var(--#{$class}-focus);
+    }
+  }
+}
+
+@mixin button-outline($class) {
+  // Outline
+  :is(button, input[type="submit"], input[type="button"], [role="button"]).#{$class}.outline,
+  input[type="reset"].outline {
+    --background-color: transparent;
+    --color: var(--#{$class});
+
+    &:is([aria-current], :hover, :active, :focus) {
+      --background-color: transparent;
+      --color: var(--#{$class}-hover);
+    }
+  }
+}

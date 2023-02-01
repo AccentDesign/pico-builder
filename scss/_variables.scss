@@ -1,0 +1,36 @@
+// Config
+// ––––––––––––––––––––
+
+// Set the root element for $enable-semantic-container and $enable-responsive-spacings
+$semantic-root-element: "body";
+
+// Enable <header>, <main>, <footer> inside $semantic-root-element as containers
+$enable-semantic-container: false;
+
+// Enable .container and .container-fluid
+$enable-class-container: false;
+
+// Enable a centered viewport for <header>, <main>, <footer> inside $enable-semantic-container
+// Fluid layout if disabled
+$enable-viewport: false;
+
+// Enable responsive spacings for <header>, <main>, <footer>, <section>, <article>
+// Fixed spacings if disabled
+$enable-responsive-spacings: false;
+
+// Enable responsive typography
+// Fixed root element size if disabled
+$enable-responsive-typography: false;
+
+// Enable .classes
+// .classless version if disabled
+$enable-classes: false;
+
+// Enable .grid class
+$enable-grid: false;
+
+// Enable transitions
+$enable-transitions: false;
+
+// Enable overriding with !important
+$enable-important: false;

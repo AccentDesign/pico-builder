@@ -1,0 +1,24 @@
+/**
+ * Theme: dark only
+ */
+
+// Variables
+@import "../variables";
+@import "default/colors";
+
+// Commons styles
+@import "default/styles";
+
+// Dark theme (Only)
+@import "default/dark";
+:root {
+  @include dark;
+}
+
+// Accent-color
+progress,
+[type="checkbox"],
+[type="radio"],
+[type="range"] {
+  accent-color: var(--primary);
+}
