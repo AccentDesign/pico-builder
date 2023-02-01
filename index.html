@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Examples</title>
+    <title>Pico Builder - Example</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="css/styles.min.css" rel="stylesheet">
     <style>
@@ -11,28 +11,35 @@
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
-        padding: 1rem;
+        padding: var(--spacing);
       }
     </style>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
+        <li><a href="">Home</a></li>
       </ul>
       <ul>
-        <li><strong>Brand</strong></li>
+        <li><strong>Pico Builder</strong></li>
       </ul>
       <ul>
         <li>
           <details dir="rtl" role="list">
-            <summary aria-haspopup="listbox" role="button" class="secondary">Dropdown</summary>
+            <summary aria-haspopup="listbox" role="button">Theme</summary>
             <ul role="listbox">
-              <li><a>Option 1</a></li>
-              <li><a>Option 2</a></li>
-              <li><a>Option 3</a></li>
+              <li><a href="#" onclick="switchTheme('auto')">Auto</a></li>
+              <li><a href="#" onclick="switchTheme('light')">Light</a></li>
+              <li><a href="#" onclick="switchTheme('dark')">Dark</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details dir="rtl" role="list">
+            <summary aria-haspopup="listbox" role="button" class="secondary">About</summary>
+            <ul role="listbox">
+              <li><a href="https://github.com/AccentDesign/pico-builder">Pico Builder on Github</a></li>
+              <li><a href="https://picocss.com">Pico.css</a></li>
             </ul>
           </details>
         </li>
@@ -40,8 +47,8 @@
     </nav>
     <header>
       <hgroup>
-        <h1>Homepage</h1>
-        <h2>Basic theme examples and usage.</h2>
+        <h1>Example</h1>
+        <h2>Basic <code>.classless</code> example with a few tweaks.</h2>
       </hgroup>
     </header>
     <main>
@@ -364,4 +371,15 @@
       </article>
     </dialog>
   </body>
+<script>
+  function switchTheme(theme) {
+    switch (theme) {
+      case "auto":
+        delete document.documentElement.dataset.theme;
+        break
+      default:
+        document.documentElement.dataset.theme = theme;
+    }
+  }
+</script>
 </html>
