@@ -13,21 +13,21 @@
 // Can be forced with data-theme="light"
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-  @include light.light;
+  @include light.theme;
 }
 
 // Dark theme (Auto)
 // Automatically enabled if user has Dark mode enabled
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    @include dark.dark;
+    @include dark.theme;
   }
 }
 
 // Dark theme (Forced)
 // Enabled if forced with data-theme="dark"
 [data-theme="dark"] {
-  @include dark.dark;
+  @include dark.theme;
 }
 
 // Accent-color

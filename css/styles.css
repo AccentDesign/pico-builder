@@ -172,6 +172,7 @@ kbd {
   --code-value-color: hsl(40deg, 20%, 50%);
   --code-comment-color: hsl(205deg, 14%, 68%);
   --accordion-border-color: var(--muted-border-color);
+  --accordion-active-summary-color: var(--primary);
   --accordion-close-summary-color: var(--color);
   --accordion-open-summary-color: var(--muted-color);
   --dropdown-background-color: #fbfbfc;

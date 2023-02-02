@@ -2,7 +2,7 @@
 @use "@picocss/pico/scss/functions" as functions;
 
 // Default: Dark theme
-@mixin dark {
+@mixin theme {
   --background-color: #{mix(colors.$black, colors.$grey-900, 37.5%)};
 
   // Texts colors
